@@ -115,7 +115,7 @@ bool enemyLoader() {
 		vultureTexture[i] = NULL;
 		vultureTexture[i] = SDL_CreateTextureFromSurface(renderer, surface);
 
-		vulturePos[i].x = 0;
+		 vulturePos[i].x = 0;
 		vulturePos[i].y = 0;
 		vulturePos[i].w = 48;
 		vulturePos[i].h = 48;
@@ -150,14 +150,14 @@ bool enemyLoader() {
 
 //   initialize the enemy position of x axis on the game screen manually
 
-	scorpionRect[0].x = SCREEN_WIDTH;
+	scorpionRect[0].x = SCREEN_WIDTH + 300;
 	hyenaRect[0].x = SCREEN_WIDTH + 100;
 	vultureRect[0].x = SCREEN_WIDTH + 200;
 	snakeRect[0].x = SCREEN_WIDTH;
 
-	scorpionRect[1].x = SCREEN_WIDTH + 4376;
+	scorpionRect[1].x = SCREEN_WIDTH + 1376;
 	hyenaRect[1].x = SCREEN_WIDTH + 2123;
-	vultureRect[1].x = SCREEN_WIDTH + 344;
+	vultureRect[1].x = SCREEN_WIDTH + 1344;
 	snakeRect[1].x = SCREEN_WIDTH + 675;
 
 	scorpionRect[2].x = SCREEN_WIDTH + 1000;

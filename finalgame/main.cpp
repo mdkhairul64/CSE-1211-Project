@@ -63,11 +63,7 @@ int main(int agr, char* args[]) {
 
 						}
 
-						else {
-							if(event.key.keysym.sym == SDLK_SPACE) {
-								game_start = true;
-							}
-						}
+						
 					}
 				} 
 
@@ -261,6 +257,15 @@ int main(int agr, char* args[]) {
 					// SDL_RenderCopy(renderer, yourScoreTex, NULL, &yourScorePos);
 					SDL_RenderCopy(renderer, highScoreTex, NULL, &highScorePos);
 					SDL_RenderCopy(renderer, newGameTex, NULL, &newGamePos);
+
+					if(event.key.keysym.sym == SDLK_SPACE && game_over) {
+								game_start = true;
+								game_over = false;
+								init();
+								screenLoader();
+								running = true;
+								
+					}
 
 				}
 				else if(!game_start)
