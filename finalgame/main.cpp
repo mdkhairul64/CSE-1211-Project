@@ -143,10 +143,7 @@ int main(int agr, char* args[]) {
 							vultureRect[i].x -= 3.8;
 						}
 
-				        //********** we need to check	game over condition ********
-						if((vultureRect[i].x < -2 && enemyAlive.vultureAlive[i] == true) || (scorpionRect[i].x < -2 && enemyAlive.scorpionAlive[i] == true) || (snakeRect[i].x < -2 && enemyAlive.snakeAlive[i] == true) || (hyenaRect[i].x < -2 && enemyAlive.hyenaAlive[i] == true)) {
-							game_over = true ;
-						}
+				        
 						
 					}
 				}
@@ -222,6 +219,15 @@ int main(int agr, char* args[]) {
 								SDL_RenderClear(renderer);
 							}
 						}	
+						for(int i = 0; i < 20; i++) {
+							//********** we need to check	game over condition ********
+							if((vultureRect[i].x < -2 && enemyAlive.vultureAlive[i] == true) || (scorpionRect[i].x < -2 && enemyAlive.scorpionAlive[i] == true) || (snakeRect[i].x < -2 && enemyAlive.snakeAlive[i] == true) || (hyenaRect[i].x < -2 && enemyAlive.hyenaAlive[i] == true)) {
+								game_over = true ;
+								
+								break ;
+								cout << i << " ";
+							}
+						}
 						
 				}// collision detector end ;
 
@@ -263,6 +269,7 @@ int main(int agr, char* args[]) {
 								game_over = false;
 								init();
 								screenLoader();
+
 								running = true;
 								
 					}
